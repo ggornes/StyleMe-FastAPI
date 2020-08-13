@@ -17,4 +17,4 @@ To upload files, first install `python-multipart`
 pip install python-multipart
 ```
 
-i.tiangolo.com/tutorial/request-files/
+https://fastapi.tiangolo.com/tutorial/request-files/
