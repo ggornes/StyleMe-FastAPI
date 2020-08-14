@@ -41,6 +41,8 @@ async def save_upload_file(file: UploadFile = File(...)):
     # global upload_folder
     file_object = file.file
     # Create empty file to copy the file_object to
+    if not os.path.exists(os.path.join(pathlib.Path().absolute() / 'uploads')):
+        os.makedirs(os.path.join(pathlib.Path().absolute() / 'uploads'))
     upload_folder = open(os.path.join(pathlib.Path().absolute() / 'uploads', file.filename), 'wb+')
     shutil.copyfileobj(file_object, upload_folder)
     upload_folder.close()
